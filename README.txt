@@ -1,0 +1,40 @@
+update 01/6/26 (update log of the project)
+  today, i had some problems w/ the compilation. When i tried to run -main.cpp- with the button of "run & debug" in VS code, the console showed this message:
+  
+   Starting build...
+   /usr/bin/g++ -fdiagnostics-color=always -g /workspaces/ccp-proyect/Agenda_OOP/PROJECT/main.cpp -o /workspaces/ccp-proyect/Agenda_OOP/PROJECT/main
+   /usr/bin/ld: /tmp/cc61EFuh.o: in function `main':
+   /workspaces/ccp-proyect/Agenda_OOP/PROJECT/main.cpp:11:(.text+0x2a): undefined reference to `database_manager::database_manager()'
+   /usr/bin/ld: /workspaces/ccp-proyect/Agenda_OOP/PROJECT/main.cpp:12:(.text+0x39): undefined reference to `email_validator::email_validator()'
+   /usr/bin/ld: /workspaces/ccp-proyect/Agenda_OOP/PROJECT/main.cpp:13:(.text+0x45): undefined reference to `Contact::Contact()'
+   /usr/bin/ld: /workspaces/ccp-proyect/Agenda_OOP/PROJECT/main.cpp:21:(.text+0xae): undefined reference to `Contact::setEmail(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)'
+   /usr/bin/ld: /workspaces/ccp-proyect/Agenda_OOP/PROJECT/main.cpp:26:(.text+0xe4): undefined reference to `Contact::setEmail(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)'
+   collect2: error: ld returned 1 exit status
+
+the problem was in the compilation. when I tried to ran -main.cpp-, the compiler was just compiling -main.cpp- However, it wasn't compiling the -.cpp-/ implementation files.
+Vs code doesn't compile all the files of the project together by default. So i needed to compile all the files together in the terminal.
+¿how did i solve it?
+
+ I created a Makefile, in the same directory of the project. This file help us to compile all
+the .cpp files together to run the program.
+When the Makefile is created, and we insert the command 'make' into the terminal: 
+The compiler looks for all the -.cpp- files in the directory where 'Makefile' was made.
+
+SRC := $(shell find . -name "*.cpp") //here's the command
+
+ The compiler compiles every -.cpp- into a -.o- file. When we modify the code, the affected -.o-
+files are updated. (after using -make- to compile before running the program).
+ All the -.o- files are linked, creating an executable file:
+Here's the line where we define the name of the executable inside of Makefile:
+
+ TARGET := agenda_app
+
+So, for compiling: make
+for running the executable: ./file_name_here
+
+
+
+ 
+
+
+
