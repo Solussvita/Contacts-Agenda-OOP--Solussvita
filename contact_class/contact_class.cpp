@@ -45,8 +45,17 @@ bool Contact::setId(std::string& id) {
     return false;
 }
 
-mail_error Contact::show_last_email_error() {
+mail_error Contact::show_last_email_error() const{
     return email_valid->getLast_mail_error();
+}
+name_error Contact::show_last_name_error() const {
+    return name_valid->getLast_name_error();
+}
+id_error Contact::show_last_id_error() const {
+    return id_valid->getLast_id_error();
+}
+age_error Contact::show_last_age_error() const {
+    return age_valid->getLast_age_error();
 }
 
 std::string Contact::getName() const { return name; }

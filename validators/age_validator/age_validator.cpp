@@ -10,7 +10,7 @@ bool age_validator::age_verification(std::string st_age) {
             last_age_error = age_error::AGE_INVALID_CHAR;
             return false;
         }
-   }
+    }
     int int_age = std::stoi(st_age);
     if (int_age < 0 || int_age > 150 ) {
         last_age_error = age_error::AGE_OUT_OF_RANGE;

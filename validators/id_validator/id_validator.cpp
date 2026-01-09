@@ -13,7 +13,7 @@ bool id_validator::id_verification(std::string st_id) {
             last_id_error = id_error::ID_INVALID_CHAR;
             return false;
         }
-   }
+    }
     if ( st_id.length() < 7 || st_id.length() > 8 ) {
         last_id_error = id_error::ID_OUT_OF_RANGE;
         return false;
@@ -22,5 +22,5 @@ bool id_validator::id_verification(std::string st_id) {
 }
 
 id_error id_validator::getLast_id_error() const {
-  return last_id_error;
+    return last_id_error;
 }
