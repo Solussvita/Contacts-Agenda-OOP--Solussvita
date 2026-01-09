@@ -137,7 +137,7 @@ bool email_validator::email_verification(std::string st_email) {
 
      local = st_email.substr(0, at);
      domain = st_email.substr(at + 1, dot - (at  + 1));
-     extension = st_email.substr(dot);
+     extension = st_email.substr(dot + 1);
 
       if (( local_verification(local) && domain_verification(domain) && extension_verification(extension)) == false) {
             return false;
