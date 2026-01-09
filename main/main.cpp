@@ -22,7 +22,11 @@ int main() {
             isValid = true;
             break;
         }
-        std::cout << "invalid email: "<< translator.strEmail_last_error(newContact.show_last_email_error()) << std::endl; 
+        std::cout << "invalid email: "<< translator.strEmail_last_error(newContact.show_last_email_error()) << std::endl;
+        std::cout << "             name       @   gmail    .   com.ar \n"
+                    << "            │─────│       │─────│       │──────│\n"
+                    << "            local          domain         extension\n"
+                    << "                                         com / ar = labels" << std::endl;
         std::cout << "Invalid email. Please try again or type 'exit' to quit." << std::endl;
     } while (!isValid);
     std::cout << "Final email set: " << newContact.getEmail() << std::endl;

@@ -9,7 +9,7 @@
             case mail_error::MISSING_AT:                 
                 return "there's no at in the string";
             case mail_error::MISSING_DOT:
-                return "there's no dot in the string";
+                return "there's no dot in the text";
             case mail_error::MISSING_DOMAIN_OR_EXTENSION:
                 return "the email just has the local-part";
             case mail_error::MISSING_EXTENSION:
