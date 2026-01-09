@@ -33,7 +33,14 @@ So, for compiling: make
 for running the executable: ./file_name_here
 
 
-
+update 01/08/26
+  today, i upgraded some features in the program:
+	-Addition of "error translator"
+	   it takes the enum errors of the verificators as parameters (enum's) and returns a message that is delivered to
+	 the user as a string. The parameter is provided with a new method of Contact (class) that shows the last email
+	 error: This method internally calls the email_verificator, which returns last_mail_error.
+	  For now, it only work with the email verificator, but it'll be able to translate all the error messages soon.
+ 
  
 
 
