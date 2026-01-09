@@ -13,7 +13,6 @@ int main() {
     bool isValid = false;
 
     do {
-        //ejecutar agenda_app para correr
         std::cout << "Enter email:" << std::endl;
         std::getline(std::cin, email);
         if (email == "exit") {
