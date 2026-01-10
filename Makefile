@@ -4,7 +4,7 @@ CXXFLAGS := -std=c++17 -Wall -Wextra -g
 SRC := $(shell find . -name "*.cpp")
 OBJ := $(SRC:.cpp=.o)
 
-TARGET := agenda_app
+TARGET := agenda_program
 
 all: $(TARGET)
 
